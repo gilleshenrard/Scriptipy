@@ -1,7 +1,11 @@
-class scriptable :
+import abc
+
+class scriptable(object) :
     """Defines basic characteristics, such as name and comment.
     Can't be instanciated.
     Defined by a name and a comment"""
+    
+    __metaclass__  = abc.ABCMeta
     
     def __init__(self):
         self._name = ""
@@ -24,8 +28,9 @@ class scriptable :
     def _set_comment(self, comment):
         self._comment = comment
 
+    @abc.abstractmethod
     def __str__(self):
-        return self._comment
+        """will return comment"""
 
     def __del__(self):
         """Just to check when the item is deleted"""
