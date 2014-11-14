@@ -19,6 +19,9 @@ class command(scriptable):
 
 	def _get_finalCommand(self):
 		return self._finalCommand
+		
+	def __str__(self):
+		return self._comment
 
 	Final = property(_set_finalCommand, _get_finalCommand)
 
