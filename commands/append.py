@@ -18,7 +18,9 @@ class Append(File):
 		self.Final += "echo {} >> {}".format(self.newLine, self.Name)
 		return self.Final
 
+#Testing the class
 if __name__=="__main__"
 	test=Append("filename", "newline")
-	print(test)
+	print(test.Name)
+	print(test.newLine)
 	print(test.Final)
