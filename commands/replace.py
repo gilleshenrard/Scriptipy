@@ -28,7 +28,7 @@ class Replace(File):
 
 	def prepareCommand(self):
 		Command.prepareCommand(self)
-		self.Final += "sed -i 's/{}/{}/g' {}".format(self.oldLine, self.newLine, self.Name)
+		return self.Final += "sed -i 's/{}/{}/g' {}".format(self.oldLine, self.newLine, self.Name)
 
 	oldLine = property(_set_oldLine, _get_oldLine)
 	
@@ -38,4 +38,4 @@ if __name__ == "__main__"
 	print(test.Name)
 	print(test.oldLine)
 	print(test.newLine)
-	
+	print(test.Final)
