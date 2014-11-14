@@ -17,13 +17,13 @@ class command(scriptable):
 	def _set_finalCommand(self, final):
 		self.finalCommand = final
 
-	def _get_finalCommand(self):
+	def prepareCommand(self):
 		return self._finalCommand
 		
 	def __str__(self):
 		return self._comment
 
-	Final = property(_set_finalCommand, _get_finalCommand)
+	Final = property(_set_finalCommand, prepareCommand)
 
 #Test the constructors
 if __name__ == "__main__":
