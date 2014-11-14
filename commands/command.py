@@ -30,4 +30,6 @@ if __name__ == "__main__":
 	test = Command("Some command", "Just a command")
 	print(test.Name)
 	print(test.Final)
+	print(test.Final)
+	test.Comment="This is a comment"
 	print(test)
