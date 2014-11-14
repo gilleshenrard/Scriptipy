@@ -1,6 +1,6 @@
 import abc
 
-class scriptable(object) :
+class Scriptable(object) :
     """Defines basic characteristics, such as name and comment.
     Can't be instanciated.
     Defined by a name and a comment"""
