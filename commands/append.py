@@ -14,5 +14,11 @@ class Append(File):
 		return "Appending line {} into file {}".format(self.newLine, self.Name)
 
 	def prepareCommand(self):
-		self.Final = "echo {} >> {}".format(self.newLine, self.Name)
+		Command.prepareCommand(self)
+		self.Final += "echo {} >> {}".format(self.newLine, self.Name)
 		return self.Final
+
+if __name__=="__main__"
+	test=Append("filename", "newline")
+	print(test)
+	print(test.Final)
