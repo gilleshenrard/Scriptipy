@@ -1,4 +1,4 @@
-class command(scriptable):
+class Command(Scriptable):
 	"""Defines specific commands (without formatting)
 	Defines the final command for the tree"""
 	
@@ -27,7 +27,7 @@ class command(scriptable):
 
 #Test the constructors
 if __name__ == "__main__":
-	test = command("Some command", "Just a command")
+	test = Command("Some command", "Just a command")
 	print(test.Name)
 	print(test.Final)
 	print(test)
