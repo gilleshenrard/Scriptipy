@@ -1,3 +1,5 @@
+from fileclass import *
+
 class Append(File):
 	"""Appends a line in a file"""
 	
