@@ -14,7 +14,7 @@ class File(Command):
 		self._newLine = ""
 
 	def __init__(self, name, newline):
-		Command.__init__(self, name, comment)
+		Command.__init__(self, name)
 		self._newLine = newline
 
 	def _get_newLine(self):
