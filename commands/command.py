@@ -5,13 +5,13 @@ class Command(Scriptable):
 	def __init__(self):
 		"""Creates an empty specific command"""
 		
-		scriptable.__init__(self)
+		Scriptable.__init__(self)
 		self.finalCommand = ""
 	
 	def __init__(self, name):
 		"""Creates a specific command"""
 
-		scriptable.__init__(self, name)
+		Scriptable.__init__(self, name)
 		self._finalCommand = ""
 
 	def _set_finalCommand(self, final):
