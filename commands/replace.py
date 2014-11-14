@@ -33,7 +33,7 @@ class Replace(File):
 	oldLine = property(_set_oldLine, _get_oldLine)
 	
 #Testing class
-if __name__ == "__main__"
+if __name__ == "__main__":
 	test=Replace("testfile", "oldline", "newline")
 	print(test.Name)
 	print(test.oldLine)
