@@ -13,7 +13,7 @@ class File(Command):
 		Command.__init__(self, name)
 		self._newLine = ""
 
-	def __init__(self, name, newline)
+	def __init__(self, name, newline):
 		Command.__init__(self, name, comment)
 		self._newLine = newline
 
