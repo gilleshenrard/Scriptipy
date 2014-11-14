@@ -1,3 +1,4 @@
+from command import *
 import abc
 
 class File(Command):
