@@ -1,3 +1,5 @@
+from scriptable import *
+
 class Command(Scriptable):
 	"""Defines specific commands (without formatting)
 	Defines the final command for the tree"""
