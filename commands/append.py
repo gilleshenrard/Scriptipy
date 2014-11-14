@@ -4,10 +4,10 @@ class Append(File):
 	def __init__(self):
 		File.__init__(self)
 
-	def __init__(self, name)
+	def __init__(self, name):
 		File.__init__(self, name)
 
-	def __init__(self, name, newline)
+	def __init__(self, name, newline):
 		File.__init__(self, name, newline)
 
 	def __str__(self):
@@ -19,7 +19,7 @@ class Append(File):
 		return self.Final
 
 #Testing the class
-if __name__=="__main__"
+if __name__ == "__main__":
 	test=Append("filename", "newline")
 	print(test.Name)
 	print(test.newLine)
