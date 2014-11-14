@@ -27,5 +27,5 @@ class File(Command):
 	def prepareCommand(self):
 		"""trying to make File abstract by making prepareCommand abstract"""
 
-	newLine = property(_get_newLine, set_newLine)
+	newLine = property(_get_newLine, _set_newLine)
 	
