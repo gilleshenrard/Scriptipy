@@ -13,7 +13,7 @@ class Replace(File):
 		File.__init__(self, name, newline)
 		self._oldLine = ""
 
-	def __init(self, name, oldline, newline):
+	def __init__(self, name, oldline, newline):
 		File.__init(self, name, newline)
 		self._oldLine = oldline
 
