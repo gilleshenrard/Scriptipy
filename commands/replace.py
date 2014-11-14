@@ -27,6 +27,11 @@ class Replace(File):
 		return "replacing {} by {} in {}".format(self.oldLine, self.newLine, self.Name)
 
 	def prepareCommand(self):
-		self.Final = "sed -i 's/{}/{}/g' {}".format(self.oldLine, self.newLine, self.Name)
+		Command.prepareCommand(self)
+		self.Final += "sed -i 's/{}/{}/g' {}".format(self.oldLine, self.newLine, self.Name)
 
 	oldLine = property(_set_oldLine, _get_oldLine)
+	
+if __name__ == "__main__"
+	test=Replace("testfile", "oldline", "newline")
+	print(test)
