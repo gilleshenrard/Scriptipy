@@ -3,6 +3,14 @@ class scriptable :
     Can't be instanciated.
     Defined by a name and a comment"""
     
+    def __init__(self):
+        self._name = ""
+        self._comment = ""
+    
+    def __init__(self, name):
+        self._name = name
+        self._comment = ""
+    
     def __init__(self, name, comment):
         self._name = name
         self._comment = comment
