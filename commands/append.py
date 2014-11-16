@@ -1,28 +1,26 @@
 from fileclass import *
 
 class Append(File):
-	"""Appends a line in a file"""
-	
-	def __init__(self):
-		File.__init__(self)
+	"""Appends a line in a file
+	Is described by :
+	Name -> File name
+	NewLine -> Line to add at the end of the file"""
 
-	def __init__(self, name):
-		File.__init__(self, name)
-
-	def __init__(self, name, newline):
+	def __init__(self, name="", newline=""):
+		"""Prepares the file appending"""
 		File.__init__(self, name, newline)
 
 	def __str__(self):
-		return "Appending line {} into file {}".format(self.newLine, self.Name)
+		"""Provides a description about which line is added to which file"""
+		return "Appending line {} into file {}".format(self._newLine, self._name)
 
 	def prepareCommand(self):
-		Command.prepareCommand(self)
-		self.Final += "echo {} >> {}".format(self.newLine, self.Name)
-		return self.Final
+		"""Prepares the UNIX command to be executed"""
+		self._finalCommand = "echo {} >> {}".format(self._newLine, self._name)
 
 #Testing the class
 if __name__ == "__main__":
-	test=Append("filename", "newline")
+	test=Append("Filename", "newline")
 	print(test.Name)
-	print(test.newLine)
+	print(test.NewLine)
 	print(test.Final)
