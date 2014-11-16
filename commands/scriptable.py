@@ -1,40 +1,31 @@
 import abc
 
 class Scriptable(object) :
-    """Defines basic characteristics, such as name and comment.
-    Can't be instanciated.
-    Defined by a name and a comment"""
-    
-    __metaclass__  = abc.ABCMeta
-    
-    def __init__(self):
-        self._name = ""
-        self._comment = ""
-    
-    def __init__(self, name):
-        self._name = name
-        self._comment = ""
-    
-    def __init__(self, name, comment):
-        self._name = name
-        self._comment = comment
+	"""Defines basic characteristics, such as name and comment.
+	Can't be instanciated.
+	Defined by a name and a comment"""
+ 
+	__metaclass__  = abc.ABCMeta
 
-    def _set_name(self, name):
-        self._name = name
+	def __init__(self, name="", comment=""):
+		self._name = name
+		self._comment = comment
 
-    def _get_name(self):
-        return self.name
+	def _set_name(self, name):
+		self._name = name
 
-    def _set_comment(self, comment):
-        self._comment = comment
+	def _get_name(self):
+		return self._name
 
-    @abc.abstractmethod
-    def __str__(self):
-        """will return comment"""
+	def _set_comment(self, comment):
+		self._comment = comment
 
-    def __del__(self):
-        """Just to check when the item is deleted"""
-        print("item {} deleted".format(self._name))
+	def _get_comment(self):
+		return self._comment
 
-    Name = property(_set_name, _get_name)
-    Comment = property(_set_comment, __str__)
+	@abc.abstractmethod
+	def __str__(self):
+		"""will return comment"""
+
+	Name = property(_get_name, _set_name)
+	Comment = property(_get_comment, _set_comment)
