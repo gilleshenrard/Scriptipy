@@ -6,6 +6,7 @@ class Scriptable(metaclass=abc.ABCMeta) :
 	Defined by a name and a comment"""
 
 	def __init__(self, name="", comment=""):
+		"""Builds a base class"""
 		self._name = name
 		self._comment = comment
 
@@ -23,10 +24,10 @@ class Scriptable(metaclass=abc.ABCMeta) :
 
 	@abc.abstractmethod
 	def __str__(self):
-		"""will return comment"""
+		"""Will be very specific to each and every final class"""
 
 	Name = property(_get_name, _set_name)
 	Comment = property(_get_comment, _set_comment)
 
 if __name__ == "__main__":
-	test=Scriptable()
+	test = Scriptable()
