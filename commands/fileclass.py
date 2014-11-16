@@ -1,12 +1,10 @@
 from command import *
 import abc
 
-class File(Command):
+class File(Command, metaclass=abc.ABCMeta):
 	"""Abstract base class to handle files
 	Defines :
 	NewLine : New line to output to a file"""
-
-	__metaclass__  = abc.ABCMeta
 
 	def __init__(self, name="", newline=""):
 		Command.__init__(self, name)
@@ -23,3 +21,6 @@ class File(Command):
 		"""trying to make File abstract by making prepareCommand abstract"""
 
 	NewLine = property(_get_newLine, _set_newLine)
+
+if __name__ == "__main__":
+	test=File()
