@@ -1,22 +1,14 @@
 from fileclass import *
 
 class Replace(File):
-	"""Replaces a line by another in a file"""
+	"""Replaces a line by another in a file
+	Is defined by :
+	Name : File name
+	OldLine : Line to replace
+	NewLine : Line to replace by"""
 
-	def __init__(self):
-		File.__init__(self)
-		self._oldLine = ""
-
-	def __init__(self, name):
-		File.__init__(self, name)
-		self._oldLine = ""
-
-	def __init__(self, name, newline):
+	def __init__(self, name="", oldline="", newline=""):
 		File.__init__(self, name, newline)
-		self._oldLine = ""
-
-	def __init__(self, name, oldline, newline):
-		File.__init(self, name, newline)
 		self._oldLine = oldline
 
 	def _set_oldLine(self, oldline):
@@ -26,18 +18,18 @@ class Replace(File):
 		return self._oldLine
 
 	def __str__(self):
-		return "replacing {} by {} in {}".format(self.oldLine, self.newLine, self.Name)
+		return "replacing {} by {} in {}".format(self._oldLine, self._newLine, self.Name)
 
 	def prepareCommand(self):
-		Command.prepareCommand(self)
-		return self.Final += "sed -i 's/{}/{}/g' {}".format(self.oldLine, self.newLine, self.Name)
+		self._finalCommand = "sed -i 's/{}/{}/g' {}".format(self._oldLine, self._newLine, self.Name)
 
-	oldLine = property(_set_oldLine, _get_oldLine)
+	OldLine = property(_get_oldLine, _set_oldLine)
 	
 #Testing class
 if __name__ == "__main__":
 	test=Replace("testfile", "oldline", "newline")
 	print(test.Name)
-	print(test.oldLine)
-	print(test.newLine)
+	print(test.OldLine)
+	print(test.NewLine)
 	print(test.Final)
+	print(test)
