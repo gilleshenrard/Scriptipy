@@ -22,11 +22,11 @@ class Command(Scriptable):
 
 	def prepareCommand(self):
 		"""Prepares the command to be executed"""
-		self._finalCommand=self._name
+		self._finalCommand=self.Name
 		
 	def __str__(self):
 		"""Provides some informations on what to execute"""
-		return "will execute {}".format(self._name)
+		return "will execute {}".format(self.Name)
 
 	Final = property(_get_finalCommand, _set_finalCommand)
 
