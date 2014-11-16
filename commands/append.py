@@ -12,11 +12,11 @@ class Append(File):
 
 	def __str__(self):
 		"""Provides a description about which line is added to which file"""
-		return "Appending line {} into file {}".format(self._newLine, self._name)
+		return "Appending line {} into file {}".format(self.NewLine, self.Name)
 
 	def prepareCommand(self):
 		"""Prepares the UNIX command to be executed"""
-		self._finalCommand = "echo {} >> {}".format(self._newLine, self._name)
+		self.Final = "echo {} >> {}".format(self.NewLine, self.Name)
 
 #Testing the class
 if __name__ == "__main__":
