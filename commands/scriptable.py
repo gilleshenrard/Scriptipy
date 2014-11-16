@@ -1,11 +1,9 @@
 import abc
 
-class Scriptable(object) :
+class Scriptable(metaclass=abc.ABCMeta) :
 	"""Defines basic characteristics, such as name and comment.
 	Can't be instanciated.
 	Defined by a name and a comment"""
- 
-	__metaclass__  = abc.ABCMeta
 
 	def __init__(self, name="", comment=""):
 		self._name = name
@@ -29,3 +27,6 @@ class Scriptable(object) :
 
 	Name = property(_get_name, _set_name)
 	Comment = property(_get_comment, _set_comment)
+
+if __name__ == "__main__":
+	test=Scriptable()
