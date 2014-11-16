@@ -18,10 +18,10 @@ class Replace(File):
 		return self._oldLine
 
 	def __str__(self):
-		return "replacing {} by {} in {}".format(self._oldLine, self._newLine, self.Name)
+		return "replacing {} by {} in {}".format(self._oldLine, self.NewLine, self.Name)
 
 	def prepareCommand(self):
-		self._finalCommand = "sed -i 's/{}/{}/g' {}".format(self._oldLine, self._newLine, self.Name)
+		self.Final = "sed -i 's/{}/{}/g' {}".format(self._oldLine, self.NewLine, self.Name)
 
 	OldLine = property(_get_oldLine, _set_oldLine)
 	
