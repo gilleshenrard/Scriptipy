@@ -1,5 +1,10 @@
-from datatype import *
 from XMLdata import *
+from append import *
+from replace import *
+from package import *
+from repository import *
+from action import *
+from subprocess import call
 
 class Process:
 	"""Defines the module to handle the data recovering"""
@@ -9,6 +14,7 @@ class Process:
 
 		self._fileName = name
 		self._fileType = ""
+		self._actions = []
 		assignMethod()
 
 	def assignMethod(self):
@@ -18,6 +24,9 @@ class Process:
 
 	def extract(self):
 		extracted = self._fileType.extractFromFile()
+
+	def executeScript(self):
+		
 
 	def _get_fileName(self):
 		return self._fileName
