@@ -16,6 +16,9 @@ class Process:
 		if file[1] == "xml":
 			self._fileType = XMLdata()
 
+	def extract(self):
+		extracted = self._fileType.extractFromFile()
+
 	def _get_fileName(self):
 		return self._fileName
 
