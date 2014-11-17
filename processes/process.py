@@ -1,4 +1,5 @@
 from datatype import *
+from XMLdata import *
 
 class Process:
 	"""Defines the module to handle the data recovering"""
@@ -8,9 +9,12 @@ class Process:
 
 		self._fileName = name
 		self._fileType = ""
+		assignMethod()
 
 	def assignMethod(self):
-		
+		file=self._fileName.rsplit(".")
+		if file[1] == "xml":
+			self._fileType = XMLdata()
 
 	def _get_fileName(self):
 		return self._fileName
