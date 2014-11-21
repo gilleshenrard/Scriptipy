@@ -1,6 +1,6 @@
-from filetype import *
+from datatype import *
 
-class XMLdata(Filetype):
+class XMLdata(Datatype):
 	"""Defines the XML file handling"""
 
 	def __init__(self):
