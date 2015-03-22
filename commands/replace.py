@@ -1,6 +1,6 @@
-from fileclass import *
+from append import *
 
-class Replace(File):
+class Replace(Append):
 	"""Replaces a line by another in a file
 	Is defined by :
 	Name : File name
@@ -8,7 +8,7 @@ class Replace(File):
 	NewLine : Line to replace by"""
 
 	def __init__(self, name="", oldline="", newline=""):
-		File.__init__(self, name, newline)
+		Append.__init__(self, name, newline)
 		self._oldLine = oldline
 
 	def _set_oldLine(self, oldline):
