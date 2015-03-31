@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from command import *
 
 class Append(Command):

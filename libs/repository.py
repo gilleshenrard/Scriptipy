@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from osspecific import *
 
 class Repository(OSSpecific):

@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import abc
 
 class Scriptable(metaclass=abc.ABCMeta) :

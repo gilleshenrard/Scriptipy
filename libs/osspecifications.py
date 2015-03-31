@@ -1,3 +1,4 @@
+#! /usr/bin/python
 class OSSpecifications:
 	"""Defines specifications for different OSes"""
 

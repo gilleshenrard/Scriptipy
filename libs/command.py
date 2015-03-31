@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from scriptable import *
 
 class Command(Scriptable):

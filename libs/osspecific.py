@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import abc
 from command import *
 from osspecifications import *

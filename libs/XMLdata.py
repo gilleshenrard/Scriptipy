@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from datatype import *
 
 class XMLdata(Datatype):

@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from append import *
 
 class Replace(Append):
