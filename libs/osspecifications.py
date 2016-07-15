@@ -48,7 +48,7 @@ if __name__ == "__main__":
 	print(test.PackageManager)
 	print(test.SpecificOptions)
 	print(test.getOption("update"))
-	test.addOption("remove", "remove")
+	test.editOption("remove", "remove")
 	print(test.SpecificOptions)
 	test.delOption("update")
 	print(test.SpecificOptions)
