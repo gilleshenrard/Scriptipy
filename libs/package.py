@@ -1,4 +1,3 @@
-#! /usr/bin/python
 from osspecific import *
 
 class Package(OSSpecific):
@@ -11,7 +10,8 @@ class Package(OSSpecific):
 		self.Final = "{} {} {} {}".format(self.OS.PackageManager, act, self.Options, self.Name)
 
 	def __str__(self):
-		return "Performing {} of package '{}'".format(self.Action, self.Name)
+		act=self.OS.getOption(self.Action)
+		return "{} {} {} {}".format(self.OS.PackageManager, act, self.Options, self.Name)
 
 if __name__ == "__main__":
 	os = OSSpecifications("ubuntu", "apt-get")
@@ -22,4 +22,13 @@ if __name__ == "__main__":
 	print(test.Action)
 	print(test.OS)
 	print(test.Final)
+	print(test)
+
+	os = OSSpecifications("archlinux", "pacman")
+	os.editOption("install", "-S")
+	test = Package("python", "install")
+	test.OS=os
+	print(test.Name)
+	print(test.Action)
+	print(test.OS)
 	print(test)
