@@ -21,7 +21,6 @@ if __name__ == "__main__":
 	print(test.Name)
 	print(test.Action)
 	print(test.OS)
-	print(test.Final)
 	print(test)
 
 	os = OSSpecifications("archlinux", "pacman")
