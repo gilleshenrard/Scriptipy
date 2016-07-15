@@ -1,4 +1,3 @@
-#! /usr/bin/python
 from osspecific import *
 
 class Repository(OSSpecific):
@@ -14,7 +13,8 @@ class Repository(OSSpecific):
 		self.Final="{} {} {}".format(act, self.Options, self.Name)
 
 	def __str__(self):
-		return "Adding repository {}".format(self.Name)
+		act=self.OS.getOption(self.Action)
+		return "{} {} {}".format(act, self.Options, self.Name)
 
 if __name__ == "__main__":
 	test = Repository("some PPA", "Add", "-y")
@@ -22,5 +22,4 @@ if __name__ == "__main__":
 	test.OS = os
 	print(test.Name)
 	print(test.Action)
-	print(test.Final)
 	print(test)
