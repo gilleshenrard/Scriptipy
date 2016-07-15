@@ -8,7 +8,7 @@ class Append(Command):
 
 	def __init__(self, t_name="", t_newline=""):
 		"""Creates and initialises a new line appending"""
-		Command.__init__(self, name)
+		Command.__init__(self, t_name)
 		self._newLine = t_newline
 
 	def _get_newLine(self):
