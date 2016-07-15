@@ -15,7 +15,7 @@ class Package(OSSpecific):
 
 if __name__ == "__main__":
 	os = OSSpecifications("ubuntu", "apt-get")
-	os.addOption("install", "install")
+	os.editOption("install", "install")
 	test = Package("python", "install", "-y")
 	test.OS=os
 	print(test.Name)
