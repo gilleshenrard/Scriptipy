@@ -6,10 +6,10 @@ class Append(Command):
 	Name : File name
 	NewLine : Line to add at the end of the file"""
 
-	def __init__(self, t_name="", t_newline=""):
+	def __init__(self, name="", newline=""):
 		"""Creates and initialises a new line appending"""
-		Command.__init__(self, t_name)
-		self._newLine = t_newline
+		Command.__init__(self, name)
+		self.NewLine = newline
 
 	def _get_newLine(self):
 		"""Returns the new line to append to a file"""
@@ -24,10 +24,3 @@ class Append(Command):
 		return "echo {} >> {}".format(self.NewLine, self.Name)
 
 	NewLine = property(_get_newLine, _set_newLine)
-
-#Testing the class
-if __name__ == "__main__":
-	test=Append("Filename", "newline")
-	print(test.Name)
-	print(test.NewLine)
-	print(test)
