@@ -13,8 +13,6 @@ class testCommand(unittest.TestCase):
 		"""Test correct values for Command constructor"""
 		try:
 			c2=Command("top", "Prints a real time list of processes")
-			print(c2)
-			print(c2.Comment)
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 #
@@ -24,7 +22,6 @@ class testCommand(unittest.TestCase):
 		"""Test correct name value for Command"""
 		try:
 			self.c.Name="ls -l"
-			print(self.c)
 		except:
 			self.fail("Test for correct Name assignment failed!")
 #
@@ -34,6 +31,5 @@ class testCommand(unittest.TestCase):
 		"""Test correct comment value for Command"""
 		try:
 			self.c.Comment="Some comment"
-			print(self.c.Comment)
 		except:
 			self.fail("Test for correct Comment assignment failed!")
