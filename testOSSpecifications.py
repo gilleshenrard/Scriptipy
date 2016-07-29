@@ -39,7 +39,7 @@ class testOSSpecifications(unittest.TestCase):
 		except:
 			self.fail("Test for correct PackageManager assignment failed!")
 #
-#	TEST PACKAGEMANAGER PROPERTY
+#	TEST OPTIONS PROPERTY
 #
 	def test_Correct_Options_ShouldNotFail(self):
 		"""Test correct Options value for Command"""
@@ -48,3 +48,8 @@ class testOSSpecifications(unittest.TestCase):
 			print(self.os.Options)
 		except:
 			self.fail("Test for correct Options assignment failed!")
+
+	def test_RemoveWrongKey_Options_RaisesKeyError(self):
+		"""Test wrong key removal into Options"""
+		with self.assertRaises(KeyError):
+			self.os.Options.pop("WrongOption")
