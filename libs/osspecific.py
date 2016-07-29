@@ -1,15 +1,15 @@
-#! /usr/bin/python
 import abc
-from command import *
-from osspecifications import *
+from .command import *
+from .osspecifications import *
 
 class OSSpecific(Command, metaclass=abc.ABCMeta):
 	"""Defines the base class to handle OS specific commands (packages, repos, ...)"""
 
-	def __init__(self, name="", act="", opt=""):
+	def __init__(self, name="", act="", opt="", os=OSSpecifications()):
 		Command.__init__(self, name)
-		self._options = opt
-		self._action = act
+		self.Options = opt
+		self.Action = act
+		self.OS = os
 
 	def _set_options(self, opt=""):
 		self._options = opt
@@ -31,7 +31,7 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 
 	@abc.abstractmethod
 	def __str__(self):
-		"""Just to make sure this is abstract"""
+		pass
 
 	Options = property(_get_options, _set_options)
 	Action = property(_get_action, _set_action)
