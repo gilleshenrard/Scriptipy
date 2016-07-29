@@ -14,6 +14,5 @@ class testRepository(unittest.TestCase):
 		try:
 			os = OSSpecifications("ubuntu", "apt-get", {"Add": "add-apt-repository"})
 			self.r=Repository("some PPA", "Add", "-y", os)
-			print(self.r)
 		except:
 			self.fail("Test for correct values assignment into Repository failed!")
