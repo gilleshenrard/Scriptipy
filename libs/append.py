@@ -1,4 +1,4 @@
-from command import *
+from .command import *
 
 class Append(Command):
 	"""Appends a line in a file
