@@ -13,7 +13,6 @@ class testAppend(unittest.TestCase):
 		"""Test correct values for constructor"""
 		try:
 			a2=Append("fileName", "This is a new line")
-			print(a2)
 		except:
 			self.fail("Correct Constructor values assignment failed!")
 #
@@ -23,7 +22,5 @@ class testAppend(unittest.TestCase):
 		"""Test correct values for NewLine"""
 		try:
 			self.a.NewLine="This other new line"
-			print(self.a)
-			print(self.a.NewLine)
 		except:
 			self.fail("Correct NewLine values assignment failed!")
