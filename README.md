@@ -4,5 +4,4 @@ Scriptipy
 Python script to execute a bunch of commands on Linux and Windows from a XML file
 
 Class diagrams :
-- Commands -> https://drive.google.com/file/d/0BwCtXo0bYqQkSlZ2M0tpRUdneVk/view?usp=sharing
-- Processes -> https://drive.google.com/file/d/0BwCtXo0bYqQkbFF1V1BJakdJZjA/view?usp=sharing
+- Commands -> https://www.lucidchart.com/invitations/accept/0864b763-d6b5-4b8f-837d-3d79d1bb6b46
