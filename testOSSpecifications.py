@@ -13,9 +13,6 @@ class testOSSpecifications(unittest.TestCase):
 		"""Test correct values for OSSpecifications constructor"""
 		try:
 			os2=OSSpecifications("Ubuntu", "apt-get", {"update": "update"})
-			print(os2)
-			os3=OSSpecifications("arch", "pacman")
-			print(os3)
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 #
@@ -25,7 +22,6 @@ class testOSSpecifications(unittest.TestCase):
 		"""Test correct name value for Command"""
 		try:
 			self.os.Name="Fedora Gnome"
-			print(self.os.Name)
 		except:
 			self.fail("Test for correct Name assignment failed!")
 #
@@ -35,7 +31,6 @@ class testOSSpecifications(unittest.TestCase):
 		"""Test correct PackageManager value for Command"""
 		try:
 			self.os.PackageManager="dnf"
-			print(self.os.PackageManager)
 		except:
 			self.fail("Test for correct PackageManager assignment failed!")
 #
@@ -45,7 +40,6 @@ class testOSSpecifications(unittest.TestCase):
 		"""Test correct Options value for Command"""
 		try:
 			self.os.Options["update"]="update"
-			print(self.os.Options)
 		except:
 			self.fail("Test for correct Options assignment failed!")
 
