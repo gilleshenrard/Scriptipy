@@ -6,8 +6,8 @@ class Command():
 	
 	def __init__(self, t_name="", t_comment=""):
 		"""Creates and initialises a new specific command"""
-		self._name = t_name
-		self._comment = t_comment
+		self.Name = t_name
+		self.Comment = t_comment
 
 	def _set_name(self, t_name):
 		"""Specifies a value for the Item name or the command"""
@@ -31,12 +31,3 @@ class Command():
 
 	Name = property(_get_name, _set_name)
 	Comment = property(_get_comment, _set_comment)
-
-#Test the constructors
-if __name__ == "__main__":
-	test = Command("Some command", "Just a command")
-	print(test.Name)
-	print(test.Comment)
-	test.Comment="This is a comment"
-	print(test.Comment)
-	print(test)
