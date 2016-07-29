@@ -15,6 +15,5 @@ class testPackage(unittest.TestCase):
 			os = OSSpecifications("ubuntu", "apt-get")
 			os.Options["install"]="install"
 			test = Package("python", "install", "-y", os)
-			print(test)
 		except:
 			self.fail("Test for correct values assignment into Package failed!")
