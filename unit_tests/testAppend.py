@@ -1,4 +1,4 @@
-from libs.append import *
+from commands.append import *
 import unittest
 
 class testAppend(unittest.TestCase):
