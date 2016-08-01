@@ -15,9 +15,9 @@ class Append(Command):
 		"""Returns the new line to append to a file"""
 		return self._newLine
 
-	def _set_newLine(self, t_newline):
+	def _set_newLine(self, newline):
 		"""Sets the new line to append to a file"""
-		self._newLine = t_newline
+		self._newLine = newline
 
 	def __str__(self):
 		"""Provides the command which appends the new line to the file"""
