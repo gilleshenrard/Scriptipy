@@ -6,20 +6,20 @@ class OSSpecifications:
 		self.PackageManager = pacman
 		self.Options = opt
 
-	def _set_name(self, t_name):
-		self._name = t_name
+	def _set_name(self, name):
+		self._name = name
 
 	def _get_name(self):
 		return self._name
 
-	def _set_packageManager(self, t_pacman):
-		self._packageManager = t_pacman
+	def _set_packageManager(self, pacman):
+		self._packageManager = pacman
 
 	def _get_packageManager(self):
 		return self._packageManager
 
-	def _set_specificOptions(self, t_opt):
-		self._specificOptions = t_opt
+	def _set_specificOptions(self, opt):
+		self._specificOptions = opt
 
 	def _get_specificOptions(self):
 		return self._specificOptions
