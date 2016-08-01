@@ -12,9 +12,9 @@ class Replace(Append):
 		Append.__init__(self, name, newline)
 		self.OldLine = oldline
 
-	def _set_oldLine(self, t_oldline):
+	def _set_oldLine(self, oldline):
 		"""Sets the old line to replace with the new line"""
-		self._oldLine = t_oldline
+		self._oldLine = oldline
 
 	def _get_oldLine(self):
 		"""Returns the old line to replace with the new line"""
