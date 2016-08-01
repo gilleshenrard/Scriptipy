@@ -1,4 +1,4 @@
-from libs.replace import *
+from commands.replace import *
 import unittest
 
 class testReplace(unittest.TestCase):
