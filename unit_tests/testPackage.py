@@ -1,4 +1,4 @@
-from libs.package import *
+from commands.package import *
 import unittest
 
 class testPackage(unittest.TestCase):
