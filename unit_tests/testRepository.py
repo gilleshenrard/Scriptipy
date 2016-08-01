@@ -1,4 +1,4 @@
-from libs.repository import *
+from commands.repository import *
 import unittest
 
 class testRepository(unittest.TestCase):
