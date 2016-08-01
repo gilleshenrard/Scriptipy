@@ -1,4 +1,4 @@
-from libs.osspecific import *
+from commands.osspecific import *
 import unittest
 
 class testOSSpecific(unittest.TestCase):
