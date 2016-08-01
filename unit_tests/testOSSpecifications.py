@@ -1,4 +1,4 @@
-from libs.osspecifications import *
+from commands.osspecifications import *
 import unittest
 
 class testOSSpecifications(unittest.TestCase):
