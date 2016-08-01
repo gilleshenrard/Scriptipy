@@ -4,22 +4,22 @@ class Command():
 	Name : Item name or command to execute
 	Comment : Eventual comment to provide"""
 	
-	def __init__(self, t_name="", t_comment=""):
+	def __init__(self, name="", comment=""):
 		"""Creates and initialises a new specific command"""
-		self.Name = t_name
-		self.Comment = t_comment
+		self.Name = name
+		self.Comment = comment
 
-	def _set_name(self, t_name):
+	def _set_name(self, name):
 		"""Specifies a value for the Item name or the command"""
-		self._name = t_name
+		self._name = name
 
 	def _get_name(self):
 		"""Returns the Item name or the command"""
 		return self._name
 
-	def _set_comment(self, t_comment=""):
+	def _set_comment(self, comment=""):
 		"""Specifies a comment for the command to execute (wipes it if left blank)"""
-		self._comment = t_comment
+		self._comment = comment
 
 	def _get_comment(self):
 		"""Returns the specified comment"""
