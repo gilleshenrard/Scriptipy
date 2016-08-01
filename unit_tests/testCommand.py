@@ -1,4 +1,4 @@
-from libs.command import *
+from commands.command import *
 import unittest
 
 class testCommand(unittest.TestCase):
