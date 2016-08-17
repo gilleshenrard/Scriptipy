@@ -4,7 +4,7 @@ import unittest
 class testOSSpecific(unittest.TestCase):
 	"""Test Case to test out OSSpecific"""
 #
-#	TEST CONSTRUCTOR
+#	INITIALIZATION
 #
 	def setUp(self):
 		"""Initialise test variables"""
@@ -12,6 +12,11 @@ class testOSSpecific(unittest.TestCase):
 #
 #	TEST CONSTRUCTOR
 #
+	def test_Instanciation_Abstract_RaisesTypeError(self):
+		"""Test correct values for Command constructor"""
+		with self.assertRaises(TypeError):
+			o2=OSSpecific()
+
 	def test_CorrectValuesContructor_ShouldNotFail(self):
 		"""Test correct values for Command constructor"""
 		try:
