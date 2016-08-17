@@ -7,9 +7,9 @@ class Datatype(metaclass=abc.ABCMeta):
 		"""Builds a data type"""
 
 	@abstractmethod
-	def importData(self):
+	def deserialize(self):
 		"""Defines the method to implement and by which we will recover all the data from the file"""
 
 	@abstractmethod
-	def exportData(self, data):
+	def serialize(self, data):
 		pass
