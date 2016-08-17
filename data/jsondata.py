@@ -1,5 +1,6 @@
 from libs.datatype import *
 from json import loads, dumps
+from os import path
 
 class JSONData(DataType):
 	def __init__(self, filename=""):
@@ -11,10 +12,15 @@ class JSONData(DataType):
 	def _set_filename(self, filename):
 		self._filename=filename
 
-	def importData(self):
-		pass
+	def deserialize(self):
+		if path.exists(self.FileName):
+			with open(self.FileName, "r") as file:
+				return loads(file.read())
+		else:
+			raise ValueError("File {} not found".format(self.FileName))
 
-	def exportData(self, data):
-		pass
+	def serialize(self, data):
+		with open(self.FileName, "w") as file:
+			file.write(dumps(data, sort_keys=True, indent=4))
 
 	FileName=property(_get_filename, _set_filename)
