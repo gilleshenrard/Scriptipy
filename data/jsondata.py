@@ -1,4 +1,4 @@
-from libs.datatype import *
+from data.datatype import *
 from json import loads, dumps
 from os import path
 
