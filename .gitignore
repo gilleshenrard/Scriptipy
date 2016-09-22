@@ -55,3 +55,6 @@ target/
 
 # XML files
 *.xml
+*/__pycache__
+*.txt
+*.xml
