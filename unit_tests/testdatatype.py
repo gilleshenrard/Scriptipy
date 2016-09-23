@@ -1,5 +1,5 @@
 from data.datatype import *
-from .not_abstract.datatype_noabstract import *
+from .not_abstract.datatype_notabstract import *
 import unittest
 
 class testDataType(unittest.TestCase):
