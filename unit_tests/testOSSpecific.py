@@ -38,7 +38,7 @@ class testOSSpecific(unittest.TestCase):
 	def test_CorrectAction_ShouldNotFail(self):
 		"""Test correct comment value for Command"""
 		try:
-			self.o.OS.Options["Some Action"]="test"
+			self.o.OS.Features["Some Action"]="test"
 			self.o.Action="Some Action"
 		except:
 			self.fail("Test for correct Action assignment failed!")

@@ -20,8 +20,8 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 	def _set_action(self, act=""):
 		if act == "":
 			self._action=""
-		elif act in self.OS.Options.keys():
-			tmp=self._OS.Options[act]
+		elif act in self.OS.Features.keys():
+			tmp=self._OS.Features[act]
 			self._action = tmp
 		else:
 			raise ValueError("Action '{}' not found for the operating system {}".format(act, self._OS.Name))

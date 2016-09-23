@@ -4,7 +4,7 @@ class OSSpecifications:
 	def __init__(self, name="", pacman="", opt={}):
 		self.Name = name
 		self.PackageManager = pacman
-		self.Options = opt
+		self.Features = opt
 
 	def _set_name(self, name):
 		self._name = name
@@ -18,15 +18,15 @@ class OSSpecifications:
 	def _get_packageManager(self):
 		return self._packageManager
 
-	def _set_specificOptions(self, opt):
-		self._specificOptions = opt
+	def _set_features(self, opt):
+		self._features = opt
 
-	def _get_specificOptions(self):
-		return self._specificOptions
+	def _get_features(self):
+		return self._features
 
 	def __str__(self):
-		return "OS : {}, package manager : {}, predefined options : {}".format(self._name, self._packageManager, self._specificOptions)
+		return "OS : {}, package manager : {}, predefined options : {}".format(self._name, self._packageManager, self._features)
 
 	Name = property(_get_name, _set_name)
 	PackageManager = property(_get_packageManager, _set_packageManager)
-	Options = property(_get_specificOptions, _set_specificOptions)
+	Features = property(_get_features, _set_features)

@@ -13,7 +13,7 @@ class testPackage(unittest.TestCase):
 		"""Test correct values for constructor"""
 		try:
 			os = OSSpecifications("ubuntu", "apt-get")
-			os.Options["install"]="install"
+			os.Features["install"]="install"
 			test = Package("python", "install", "-y", os)
 		except:
 			self.fail("Test for correct values assignment into Package failed!")
