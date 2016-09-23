@@ -21,7 +21,7 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 		if act == "":
 			self._action=""
 		elif act in self.OS.Features.keys():
-			tmp=self._OS.Features[act]
+			tmp=self.OS.Features[act]
 			self._action = tmp
 		else:
 			raise ValueError("Action '{}' not found for the operating system {}".format(act, self._OS.Name))
