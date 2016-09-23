@@ -6,5 +6,4 @@ class Package(OSSpecific):
 		OSSpecific.__init__(self, name, action, option, os)
 
 	def __str__(self):
-		act=self.OS.Options[self.Action]
-		return "{} {} {} {}".format(self.OS.PackageManager, act, self.Options, self.Name)
+		return "{} {} {} {}".format(self.OS.PackageManager, self.Action, self.Options, self.Name)

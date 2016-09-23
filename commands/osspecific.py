@@ -8,8 +8,8 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 	def __init__(self, name="", act="", opt="", os=OSSpecifications()):
 		Command.__init__(self, name)
 		self.Options = opt
-		self.Action = act
 		self.OS = os
+		self.Action = act
 
 	def _set_options(self, opt=""):
 		self._options = opt
@@ -18,7 +18,11 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 		return self._options
 
 	def _set_action(self, act=""):
-		self._action = act
+		if act in self.OS.Options.keys():
+			tmp=self._OS.Options[act]
+			self._action = tmp
+		else:
+			raise ValueError("Action '{}' not found for the operating system {}".format(act, self._OS.Name))
 
 	def _get_action(self):
 		return self._action
