@@ -1,13 +1,14 @@
-#! /usr/bin/python
-from datatype import *
+from .datatype import *
 
 class XMLdata(Datatype):
 	"""Defines the XML file handling"""
 
-	def __init__(self):
+	def __init__(self, source=""):
 		"""Builds a new XML handling module"""
-		
-		Filetype.__init__(self)
+		DataType.__init__(self, source)
 
-	def extractFromFile(self):
+	def deserialize(self):
 		"""Extracting procedure"""
+
+	def serialize(self):
+		"""Serializing procedure"""
