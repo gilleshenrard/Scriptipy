@@ -16,15 +16,6 @@ class testJSONData(unittest.TestCase):
 		except:
 			self.fail("Correct Constructor values assignment failed!")
 #
-#	TEST FILENAME PROPERTY
-#
-	def test_CorrectValues_NewLine_ShouldNotFail(self):
-		"""Test correct values for NewLine"""
-		try:
-			self.j.Source="This other new line"
-		except:
-			self.fail("Correct FileName values assignment failed!")
-#
 #	TEST DESERIALIZATION
 #
 	def test_Deserialization_Correct_ShouldNotFail(self):
