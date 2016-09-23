@@ -8,7 +8,7 @@ class testOSSpecific(unittest.TestCase):
 #
 	def setUp(self):
 		"""Initialise test variables"""
-		self.o=OSSpecificNotAbstract(name="test", act="doTest", opt="-l", os=OSSpecifications())
+		self.o=OSSpecificNotAbstract(name="test", act="", opt="-l", os=OSSpecifications())
 #
 #	TEST CONSTRUCTOR
 #
@@ -20,7 +20,7 @@ class testOSSpecific(unittest.TestCase):
 	def test_CorrectValuesContructor_ShouldNotFail(self):
 		"""Test correct values for Command constructor"""
 		try:
-			o2=OSSpecificNotAbstract(name="test2", act="doTest2", opt="-la", os=OSSpecifications())
+			o2=OSSpecificNotAbstract(name="test2", act="", opt="-la", os=OSSpecifications())
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 #
@@ -38,9 +38,15 @@ class testOSSpecific(unittest.TestCase):
 	def test_CorrectAction_ShouldNotFail(self):
 		"""Test correct comment value for Command"""
 		try:
+			self.o.OS.Options["Some Action"]="test"
 			self.o.Action="Some Action"
 		except:
 			self.fail("Test for correct Action assignment failed!")
+
+	def test_Action_RaisesValueError(self):
+		"""Test wrong values for Action setter"""
+		with self.assertRaises(ValueError):
+			self.o.Action="Wrong Action"
 #
 #	TEST OS PROPERTY
 #
