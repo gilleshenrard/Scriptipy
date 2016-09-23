@@ -1,32 +1,31 @@
 class Command():
-	"""Defines specific commands (without formatting)
-	Is described by :
-	Name : Item name or command to execute
-	Comment : Eventual comment to provide"""
+	"""Specific command to execute
+	:param name: Item name or command to execute (string)
+	:param comment: Eventual comment to provide"""
 	
 	def __init__(self, name="", comment=""):
-		"""Creates and initialises a new specific command"""
+		"""Create and initialise a specific command."""
 		self.Name = name
 		self.Comment = comment
 
 	def _set_name(self, name):
-		"""Specifies a value for the Item name or the command"""
+		"""Set the the command."""
 		self._name = name
 
 	def _get_name(self):
-		"""Returns the Item name or the command"""
+		"""Return the command."""
 		return self._name
 
 	def _set_comment(self, comment=""):
-		"""Specifies a comment for the command to execute (wipes it if left blank)"""
+		"""Set the comment of the command."""
 		self._comment = comment
 
 	def _get_comment(self):
-		"""Returns the specified comment"""
+		"""Return the comment of the command."""
 		return self._comment
 
 	def __str__(self):
-		"""Provides the command to execute"""
+		"""Return the command as a string."""
 		return self.Name
 
 	Name = property(_get_name, _set_name)
