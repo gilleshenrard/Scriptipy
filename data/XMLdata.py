@@ -1,6 +1,6 @@
 from .datatype import *
 
-class XMLdata(Datatype):
+class XMLdata(DataType):
 	"""Defines the XML file handling"""
 
 	def __init__(self, source=""):
