@@ -21,7 +21,7 @@ class testJSONData(unittest.TestCase):
 	def test_CorrectValues_NewLine_ShouldNotFail(self):
 		"""Test correct values for NewLine"""
 		try:
-			self.j.FileName="This other new line"
+			self.j.Source="This other new line"
 		except:
 			self.fail("Correct FileName values assignment failed!")
 #
@@ -36,7 +36,7 @@ class testJSONData(unittest.TestCase):
 
 	def test_Deserialization_FileDoesNotExist_RaisesValueError(self):
 		with self.assertRaises(ValueError):
-			self.j.FileName="filedoesnotexist.txt"
+			self.j.Source="filedoesnotexist.txt"
 			self.j.deserialize()
 #
 #	TEST SERIALIZATION
@@ -44,7 +44,7 @@ class testJSONData(unittest.TestCase):
 	def test_Serialization_Correct_ShouldNotFail(self):
 		try:
 			data=[{"eyes": "green","name": "John","surname": "Smith"},35,"Test2"]
-			self.j.FileName="unit_tests/jsontestdata2.txt"
+			self.j.Source="unit_tests/jsontestdata2.txt"
 			self.j.serialize(data)
 		except:
 			self.fail("Correct serialization values failed!")
