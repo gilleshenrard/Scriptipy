@@ -5,7 +5,7 @@ class testJSONData(unittest.TestCase):
 	"""Test Case to test out Append"""
 	def setUp(self):
 		"""Initialise test variables"""
-		self.j=JSONData("unit_tests/jsontestdata.txt")
+		self.j=JSONData("unit_tests/test_files/jsontestdata.txt")
 #
 #	TEST CONSTRUCTOR
 #
@@ -35,7 +35,7 @@ class testJSONData(unittest.TestCase):
 	def test_Serialization_Correct_ShouldNotFail(self):
 		try:
 			data=[{"eyes": "green","name": "John","surname": "Smith"},35,"Test2"]
-			self.j.Source="unit_tests/jsontestdata2.txt"
+			self.j.Source="unit_tests/test_files/jsontestdata2.txt"
 			self.j.serialize(data)
 		except:
 			self.fail("Correct serialization values failed!")
