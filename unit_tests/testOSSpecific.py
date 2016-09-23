@@ -1,4 +1,4 @@
-from unit_tests.osspecific_notabstract import *
+from unit_tests.not_abstract.osspecific_notabstract import *
 from commands.osspecific import *
 import unittest
 
