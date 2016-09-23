@@ -4,7 +4,10 @@ class Append(Command):
 	"""Command to append a line in a file
 	
 	:param name : File name
-	:param newline : Line to append to the file"""
+	:param newline : Line to append to the file
+
+	Note:
+	Uses built-in 'echo' command, will work on every UNIX based distribution."""
 
 	def __init__(self, name="", newline=""):
 		"""Create and initialise a line appending command."""
