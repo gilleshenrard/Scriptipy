@@ -12,7 +12,7 @@ class testPackage(unittest.TestCase):
 	def test_Correct_Constructor_ShouldNotFail(self):
 		"""Test correct values for constructor"""
 		try:
-			os = OSSpecifications("ubuntu", "apt-get")
+			os = OSGear("ubuntu", "apt-get")
 			os.Features["install"]="install"
 			test = Package("python", "install", "-y", os)
 		except:

@@ -1,11 +1,11 @@
 import abc
 from .command import *
-from .osspecifications import *
+from .osgear import *
 
 class OSSpecific(Command, metaclass=abc.ABCMeta):
 	"""Defines the base class to handle OS specific commands (packages, repos, ...)"""
 
-	def __init__(self, name="", act="", opt="", os=OSSpecifications()):
+	def __init__(self, name="", act="", opt="", os=OSGear()):
 		Command.__init__(self, name)
 		self.Options = opt
 		self.OS = os

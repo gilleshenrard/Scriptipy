@@ -2,7 +2,7 @@ from .osspecific import *
 
 class Package(OSSpecific):
 	"""Creates a package"""
-	def __init__(self, name="", action="", option="", os=OSSpecifications()):
+	def __init__(self, name="", action="", option="", os=OSGear()):
 		OSSpecific.__init__(self, name, action, option, os)
 
 	def __str__(self):

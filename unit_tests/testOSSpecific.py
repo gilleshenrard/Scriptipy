@@ -8,7 +8,7 @@ class testOSSpecific(unittest.TestCase):
 #
 	def setUp(self):
 		"""Initialise test variables"""
-		self.o=OSSpecificNotAbstract(name="test", act="", opt="-l", os=OSSpecifications())
+		self.o=OSSpecificNotAbstract(name="test", act="", opt="-l", os=OSGear())
 #
 #	TEST CONSTRUCTOR
 #
@@ -20,7 +20,7 @@ class testOSSpecific(unittest.TestCase):
 	def test_CorrectValuesContructor_ShouldNotFail(self):
 		"""Test correct values for Command constructor"""
 		try:
-			o2=OSSpecificNotAbstract(name="test2", act="", opt="-la", os=OSSpecifications())
+			o2=OSSpecificNotAbstract(name="test2", act="", opt="-la", os=OSGear())
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 #
@@ -53,6 +53,6 @@ class testOSSpecific(unittest.TestCase):
 	def test_CorrectOS_ShouldNotFail(self):
 		"""Test correct comment value for Command"""
 		try:
-			self.o.OS=OSSpecifications(name="Ubuntu", pacman="apt-get", opt={"install":"install", "remove":"remove"})
+			self.o.OS=OSGear(name="Ubuntu", pacman="apt-get", opt={"install":"install", "remove":"remove"})
 		except:
 			self.fail("Test for correct OS assignment failed!")

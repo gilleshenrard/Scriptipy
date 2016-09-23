@@ -2,7 +2,7 @@ from .osspecific import *
 
 class Repository(OSSpecific):
 	"""Defines the behaviour to handle a repository"""
-	def __init__(self, name="", act="", opt="", os=OSSpecifications()):
+	def __init__(self, name="", act="", opt="", os=OSGear()):
 		"""Defines an action on a repository"""
 		OSSpecific.__init__(self, name, act, opt, os)
 
