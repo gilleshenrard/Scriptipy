@@ -18,7 +18,9 @@ class OSSpecific(Command, metaclass=abc.ABCMeta):
 		return self._options
 
 	def _set_action(self, act=""):
-		if act in self.OS.Options.keys():
+		if act == "":
+			self._action=""
+		elif act in self.OS.Options.keys():
 			tmp=self._OS.Options[act]
 			self._action = tmp
 		else:
