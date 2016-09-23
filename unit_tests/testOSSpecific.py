@@ -1,4 +1,5 @@
 from unit_tests.osspecific_notabstract import *
+from commands.osspecific import *
 import unittest
 
 class testOSSpecific(unittest.TestCase):
