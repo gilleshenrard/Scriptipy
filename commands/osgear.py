@@ -6,7 +6,7 @@ class OSGear:
 	:param opt: Dictionnary of the options used by the package manager (install, remove, list, ...)"""
 
 	def __init__(self, name="", pacman="", opt={}):
-		"""Define the OS characteristics."""
+		"""Declare and initialise the OS characteristics."""
 		self.Name = name
 		self.PackageManager = pacman
 		self.Features = opt
