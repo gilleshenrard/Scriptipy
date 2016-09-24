@@ -24,6 +24,6 @@ class Append(Command):
 
 	def __str__(self):
 		"""Return the line appending command as a string."""
-		return "echo {} >> {}".format(self.NewLine, self.Name)
+		return 'echo "{}" >> {}'.format(self.NewLine, self.Name)
 
 	NewLine = property(_get_newLine, _set_newLine)
