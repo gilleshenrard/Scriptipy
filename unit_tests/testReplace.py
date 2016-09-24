@@ -14,6 +14,7 @@ class testReplace(unittest.TestCase):
 		"""Test correct values for constructor (should not fail)"""
 		try:
 			r2=Replace("fileName", "This is an old line", "This is a new line")
+			self.assertEqual(r2.OldLine, "This is an old line")
 		except:
 			self.fail("Correct Constructor values assignment failed!")
 
@@ -24,5 +25,6 @@ class testReplace(unittest.TestCase):
 		"""Test correct values for OldLine (should not fail)"""
 		try:
 			self.r.OldLine="This other old line"
+			self.assertEqual(self.r.OldLine, "This other old line")
 		except:
 			self.fail("Correct OldLine values assignment failed!")
