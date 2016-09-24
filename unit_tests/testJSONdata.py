@@ -22,7 +22,7 @@ class testJSONData(unittest.TestCase):
 		self.assertEqual(data, [{"eyes": "blue","name": "John","surname": "Doe"},34,"Test"])
 
 	def test_Deserialization_FileDoesNotExist_RaisesValueError(self):
-		"""Test deserialisation from a file which doesn*t exist (raises ValueError)."""
+		"""Test deserialisation from a file which doesn't exist (raises ValueError)."""
 		with self.assertRaises(ValueError):
 			self.j.Source="filedoesnotexist.txt"
 			self.j.deserialize()
