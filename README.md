@@ -1,11 +1,19 @@
 Scriptipy
 =========
 
-After installing a UNIX based distribution, one often needs to install some packages and tweak sonme configurations to make it really functionnal.
+After installing a UNIX based distribution, one often needs to install some packages and tweak some configurations to make it really functional.
 
 This process, done manually, can be a little cumbersome. Thus, after a while, scripting the post-installation treatment is an excellent solution.
 
-However, without any knowledge of shell command lines, this process can get pretty tricky. This is where Scriptipy gets involved. It is a post-installation script aiming to simplify this process. It works like a DBMS, but for shell.
+However, without any knowledge of shell command lines, this process can get pretty tricky. This is where Scriptipy gets involved. It is a post-installation script (in Python) aiming to simplify this process. It proposes following features :
+
+* Executing a row command
+* Appending a line to a file
+* Replacing a line into a file
+* Package specific actions
+* Repository specific actions
+
+It works like a DBMS, but for shell, in Python.
 
 
 Class diagrams
