@@ -3,55 +3,41 @@ import unittest
 
 class testOSGear(unittest.TestCase):
 	"""Test Case to test out OSGear"""
+	
+	#
+	#	TEST INITIALISATION
+	#
 	def setUp(self):
-		"""Initialise test variables"""
-		self.os=OSGear()
-
-	#
-	#	TEST CONSTRUCTOR
-	#
-	def test_Contructor_Correct_ShouldNotFail(self):
-		"""Test correct values for OSGear constructor (should not fail)."""
-		try:
-			os2=OSGear("Ubuntu", "apt-get", {"update": "update"})
-			self.assertEqual(os2.Name, "Ubuntu")
-			self.assertEqual(os2.PackageManager, "apt-get")
-			self.assertEqual(os2.Features, {"update": "update"})
-		except:
-			self.fail("Test for correct Constructor values assignment failed!")
+		"""Declare an Append test object with correct values (should not fail).
+		Test each given values."""
+		self.os=OSGear("Ubuntu", "apt-get", {"update": "update"})
+		self.assertEqual(self.os.Name, "Ubuntu")
+		self.assertEqual(self.os.PackageManager, "apt-get")
+		self.assertEqual(self.os.Features, {"update": "update"})
 
 	#
 	#	TEST NAME PROPERTY
 	#
 	def test_Name_Correct_ShouldNotFail(self):
 		"""Test correct value for name into OSGear (should not fail)."""
-		try:
-			self.os.Name="Fedora Gnome"
-			self.assertEqual(self.os.Name, "Fedora Gnome")
-		except:
-			self.fail("Test for correct Name assignment failed!")
+		self.os.Name="Fedora Gnome"
+		self.assertEqual(self.os.Name, "Fedora Gnome")
 
 	#
 	#	TEST PACKAGEMANAGER PROPERTY
 	#
 	def test_PackageManager_Correct_ShouldNotFail(self):
 		"""Test correct PackageManager value for OSGear (should not fail)."""
-		try:
-			self.os.PackageManager="dnf"
-			self.assertEqual(self.os.PackageManager, "dnf")
-		except:
-			self.fail("Test for correct PackageManager assignment failed!")
+		self.os.PackageManager="dnf"
+		self.assertEqual(self.os.PackageManager, "dnf")
 
 	#
 	#	TEST FEATURES PROPERTY
 	#
 	def test_Features_Correct_ShouldNotFail(self):
 		"""Test correct Features value for OSGear (should not fail)."""
-		try:
-			self.os.Features["update"]="update"
-			self.assertEqual(self.os.Features["update"], "update")
-		except:
-			self.fail("Test for correct Features assignment failed!")
+		self.os.Features["Update"]="update"
+		self.assertEqual(self.os.Features["Update"], "update")
 
 	def test_Features_WrongKey_Retrieve_RaisesKeyError(self):
 		"""Test wrong key retrieval into Features (raises KeyError)."""
