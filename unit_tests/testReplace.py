@@ -6,20 +6,22 @@ class testReplace(unittest.TestCase):
 	def setUp(self):
 		"""Initialise test variables"""
 		self.r=Replace()
-#
-#	TEST CONSTRUCTOR
-#
-	def test_CorrectValues_Constructor_ShouldNotFail(self):
-		"""Test correct values for constructor"""
+
+    #
+    #	TEST CONSTRUCTOR
+    #
+	def test_Constructor_Correct_ShouldNotFail(self):
+		"""Test correct values for constructor (should not fail)"""
 		try:
 			r2=Replace("fileName", "This is an old line", "This is a new line")
 		except:
 			self.fail("Correct Constructor values assignment failed!")
-#
-#	TEST OLDLINE PROPERTY
-#
-	def test_CorrectValues_OldLine_ShouldNotFail(self):
-		"""Test correct values for OldLine"""
+
+    #
+    #	TEST OLDLINE PROPERTY
+    #
+	def test_OldLine_Correct_ShouldNotFail(self):
+		"""Test correct values for OldLine (should not fail)"""
 		try:
 			self.r.OldLine="This other old line"
 		except:
