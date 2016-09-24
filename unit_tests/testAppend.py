@@ -5,7 +5,7 @@ class testAppend(unittest.TestCase):
 	"""Test Case to test out Append"""
 	def setUp(self):
 		"""Initialise test variables"""
-		self.a=Append()
+		self.a=Append("FileName", "This is a new line")
 
     #
     #	TEST CONSTRUCTOR
@@ -28,3 +28,10 @@ class testAppend(unittest.TestCase):
 			self.assertEqual(self.a.NewLine, "This other new line")
 		except:
 			self.fail("Correct NewLine values assignment failed!")
+
+	#
+	# TEST __STR__
+	#
+	def test_str_Final_ShouldNotFail(self):
+		"""Test if final result is the one expected"""
+		self.assertEqual(str(self.a), 'echo "This is a new line" >> FileName')
