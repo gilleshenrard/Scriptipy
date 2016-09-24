@@ -6,11 +6,13 @@ class testDataType(unittest.TestCase):
 	"""Test Case to test out DataType"""
 
 	#
-	#	INITIALIZATION
+	#	TEST INITIALISATION
 	#
 	def setUp(self):
-		"""Initialise test variables."""
+		"""Declare a Repository test object with correct values (should not fail).
+		Test each given values."""
 		self.d=DataTypeNotAbstract("test")
+		self.assertEqual(self.d.Source, "test")
 
 	#
 	#	TEST CONSTRUCTOR
@@ -20,19 +22,10 @@ class testDataType(unittest.TestCase):
 		with self.assertRaises(TypeError):
 			d2=DataType()
 
-	def test_Contructor_Correct_ShouldNotFail(self):
-		"""Test correct values for DataType constructor (abstraction removed, should not fail)"""
-		try:
-			d2=DataTypeNotAbstract("test2")
-		except:
-			self.fail("Test for correct Constructor values assignment failed!")
-
 	#
 	#	TEST SOURCE PROPERTY
 	#
 	def test_Source_Correct_ShouldNotFail(self):
 		"""Test correct Source value (should not fail)"""
-		try:
-			self.d.Source="test"
-		except:
-			self.fail("Test for correct Source assignment failed!")
+		self.d.Source="test2"
+		self.assertEqual(self.d.Source, "test2")
