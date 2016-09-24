@@ -5,6 +5,8 @@ class testRepository(unittest.TestCase):
 	"""Test Case to test out Repository"""
 	def setUp(self):
 		"""Initialise test variables"""
+		os = OSGear("ubuntu", "apt-get", {"Add": "add-apt-repository"})
+		self.r=Repository("some PPA", "Adds a PPA", "Add", "-y", os)
 		pass
 
 	#
@@ -23,9 +25,4 @@ class testRepository(unittest.TestCase):
 	#
 	def test_str_Final_ShouldNotFail(self):
 		"""Test if final result is the one expected"""
-		try:
-			os = OSGear("ubuntu", "apt-get", {"Add": "add-apt-repository"})
-			r=Repository("some PPA", "Adds a PPA", "Add", "-y", os)
-			self.assertEqual(str(r), "add-apt-repository -y some PPA")
-		except:
-			self.fail("Test for expected final command failed!")
+		self.assertEqual(str(self.r), "add-apt-repository -y some PPA")
