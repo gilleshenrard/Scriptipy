@@ -1,25 +1,30 @@
 import abc
 
 class DataType(metaclass=abc.ABCMeta):
-	"""Defines the interface for data types (XML, plain text files, databases)"""
+	"""Base class to handle commands (de)serialisation (JSON, XML, database, ...)
+
+    :param source: Source of data (file/server/...)"""
 
 	def __init__(self, source=""):
-		"""Builds a data type"""
+		"""Declare and initialise a command (de)serialisation process."""
 		self.Source=source
 
 	def _get_source(self):
+		"""Get the source of the (de)serialisation."""
 		return self._source
 
 	def _set_source(self, source):
+		"""Set the source of the (de)serialisation."""
 		self._source=source
 
 	@abc.abstractmethod
 	def deserialize(self):
-		"""Defines the method to implement and by which we will recover all the data from the file"""
+		"""Define the base deserialisation method."""
+		pass
 
 	@abc.abstractmethod
 	def serialize(self, data):
+		"""Define the base serialisation method."""
 		pass
-
 
 	Source=property(_get_source, _set_source)
