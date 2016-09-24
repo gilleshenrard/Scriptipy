@@ -29,3 +29,10 @@ class testCommand(unittest.TestCase):
 		"""Test correct comment value for Command (should not fail)"""
 		self.c.Comment="Some comment"
 		self.assertEqual(self.c.Comment, "Some comment")
+
+	#
+	# TEST __STR__
+	#
+	def test_str_Final_ShouldNotFail(self):
+		"""Test if final result is the one expected"""
+		self.assertEqual(str(self.c), "top")
