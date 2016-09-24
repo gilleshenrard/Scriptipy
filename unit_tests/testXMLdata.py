@@ -3,16 +3,12 @@ import unittest
 
 class testXMLData(unittest.TestCase):
 	"""Test Case to test out XMLdata"""
-	def setUp(self):
-		"""Initialise test variables"""
-		self.x=XMLdata("test")
 
 	#
-	#	TEST CONSTRUCTOR
+	#	TEST INITIALISATION
 	#
-	def test_Constructor_Correct_ShouldNotFail(self):
-		"""Test correct values for XMLData constructor (should not fail)."""
-		try:
-			x2=XMLdata("fileName")
-		except:
-			self.fail("Correct Constructor values assignment failed!")
+	def setUp(self):
+		"""Declare a XMLData test object with correct values (should not fail).
+		Test each given values."""
+		self.x=XMLdata("filename")
+		self.assertEqual(self.x.Source, "filename")
