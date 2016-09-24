@@ -43,17 +43,17 @@ class testOSGear(unittest.TestCase):
 			self.fail("Test for correct PackageManager assignment failed!")
 
 	#
-	#	TEST OPTIONS PROPERTY
+	#	TEST FEATURES PROPERTY
 	#
-	def test_Options_Correct_ShouldNotFail(self):
-		"""Test correct Options value for OSGear (should not fail)."""
+	def test_Features_Correct_ShouldNotFail(self):
+		"""Test correct Features value for OSGear (should not fail)."""
 		try:
 			self.os.Features["update"]="update"
 			self.assertEqual(self.os.Features["update"], "update")
 		except:
-			self.fail("Test for correct Options assignment failed!")
+			self.fail("Test for correct Features assignment failed!")
 
-	def test_Options_WrongKey_Retrieve_RaisesKeyError(self):
-		"""Test wrong key retrieval into Options (raises KeyError)."""
+	def test_Features_WrongKey_Retrieve_RaisesKeyError(self):
+		"""Test wrong key retrieval into Features (raises KeyError)."""
 		with self.assertRaises(KeyError):
 			test = self.os.Features["WrongKey"]
