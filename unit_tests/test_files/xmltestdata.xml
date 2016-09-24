@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<OSGear>
+		<Name>Ubuntu</Name>
+		<PackageManager>apt-get</PackageManager>
+		<Features>
+			<Ft key="install">install</Ft>
+			<Ft key="remove">remove</Ft>
+			<Ft key="AR">autoremove</Ft>
+			<Ft key="add-repo">add-apt-repository</Ft>
+			<Ft key="update">update</Ft>
+			<Ft key="upgrade">upgrade</Ft>
+			<Ft key="d-up">dist-upgrade</Ft>
+		<Features>
+	<OSGear>
+
+	<Repository act="add-repo">
+		<Name>ppa:webupd8team/java</Name>
+	</Repository>
+
+	<Package act="update"></Package>
+	<Package act="upgrade">
+		<Options>-y</Options>
+	</Package>
+	<Package act="d-up">
+		<Options>-y</Options>
+	</Package>
+	<Package act="AR">
+		<Options>-y</Options>
+	</Package>
+
+	<Package act="install">
+		<Name>python3</Name>
+		<Options>-y<Options>
+	</Package>
+	<Package act="AR">
+		<Name>firefox*</Name>
+		<Options>--purge -y</Options>
+	</Package>
+	<Package act="install">
+		<Name>chromium-browser</Name>
+		<Options>-y<Options>
+	</Package>
+	<Package act="install">
+		<Name>oracle-java8-installer</Name>
+		<Options>-y<Options>
+	</Package>
+</script>
