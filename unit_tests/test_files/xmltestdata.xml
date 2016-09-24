@@ -11,8 +11,8 @@
 			<Ft key="update">update</Ft>
 			<Ft key="upgrade">upgrade</Ft>
 			<Ft key="d-up">dist-upgrade</Ft>
-		<Features>
-	<OSGear>
+		</Features>
+	</OSGear>
 
 	<Repository act="add-repo">
 		<Name>ppa:webupd8team/java</Name>
@@ -31,7 +31,7 @@
 
 	<Package act="install">
 		<Name>python3</Name>
-		<Options>-y<Options>
+		<Options>-y</Options>
 	</Package>
 	<Package act="AR">
 		<Name>firefox*</Name>
@@ -39,10 +39,10 @@
 	</Package>
 	<Package act="install">
 		<Name>chromium-browser</Name>
-		<Options>-y<Options>
+		<Options>-y</Options>
 	</Package>
 	<Package act="install">
 		<Name>oracle-java8-installer</Name>
-		<Options>-y<Options>
+		<Options>-y</Options>
 	</Package>
 </script>
