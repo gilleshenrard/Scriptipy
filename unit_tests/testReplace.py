@@ -34,7 +34,4 @@ class testReplace(unittest.TestCase):
 	#
 	def test_str_Final_ShouldNotFail(self):
 		"""Test if final result is the one expected"""
-		try:
-			self.assertEqual(str(self.r), "sed -i 's/This is an old line/This is a new line/g' fileName")
-		except:
-			self.fail("Test for expected final command failed!")
+		self.assertEqual(str(self.r), "sed -i 's/This is an old line/This is a new line/g' fileName")
