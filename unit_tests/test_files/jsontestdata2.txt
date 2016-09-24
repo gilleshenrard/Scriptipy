@@ -1,9 +1,0 @@
-[
-    {
-        "eyes": "green",
-        "name": "John",
-        "surname": "Smith"
-    },
-    35,
-    "Test2"
-]
