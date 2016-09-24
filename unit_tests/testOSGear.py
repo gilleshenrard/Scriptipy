@@ -14,6 +14,9 @@ class testOSGear(unittest.TestCase):
 		"""Test correct values for OSGear constructor (should not fail)."""
 		try:
 			os2=OSGear("Ubuntu", "apt-get", {"update": "update"})
+			self.assertEqual(os2.Name, "Ubuntu")
+			self.assertEqual(os2.PackageManager, "apt-get")
+			self.assertEqual(os2.Features, {"update": "update"})
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 
@@ -24,6 +27,7 @@ class testOSGear(unittest.TestCase):
 		"""Test correct value for name into OSGear (should not fail)."""
 		try:
 			self.os.Name="Fedora Gnome"
+			self.assertEqual(self.os.Name, "Fedora Gnome")
 		except:
 			self.fail("Test for correct Name assignment failed!")
 
@@ -34,6 +38,7 @@ class testOSGear(unittest.TestCase):
 		"""Test correct PackageManager value for OSGear (should not fail)."""
 		try:
 			self.os.PackageManager="dnf"
+			self.assertEqual(self.os.PackageManager, "dnf")
 		except:
 			self.fail("Test for correct PackageManager assignment failed!")
 
@@ -44,10 +49,11 @@ class testOSGear(unittest.TestCase):
 		"""Test correct Options value for OSGear (should not fail)."""
 		try:
 			self.os.Features["update"]="update"
+			self.assertEqual(self.os.Features["update"], "update")
 		except:
 			self.fail("Test for correct Options assignment failed!")
 
-	def test_Options_RemoveWrongKey_RaisesKeyError(self):
-		"""Test wrong key removal into Options (raises KeyError)."""
+	def test_Options_WrongKey_Retrieve_RaisesKeyError(self):
+		"""Test wrong key retrieval into Options (raises KeyError)."""
 		with self.assertRaises(KeyError):
-			self.os.Features.pop("WrongOption")
+			test = self.os.Features["WrongKey"]
