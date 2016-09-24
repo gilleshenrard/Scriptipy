@@ -6,20 +6,22 @@ class testAppend(unittest.TestCase):
 	def setUp(self):
 		"""Initialise test variables"""
 		self.a=Append()
-#
-#	TEST CONSTRUCTOR
-#
-	def test_CorrectValues_Constructor_ShouldNotFail(self):
-		"""Test correct values for constructor"""
+
+    #
+    #	TEST CONSTRUCTOR
+    #
+	def test_Constructor_Correct_ShouldNotFail(self):
+		"""Test correct values for constructor (sould not fail)"""
 		try:
 			a2=Append("fileName", "This is a new line")
 		except:
 			self.fail("Correct Constructor values assignment failed!")
-#
-#	TEST NEWLINE PROPERTY
-#
-	def test_CorrectValues_NewLine_ShouldNotFail(self):
-		"""Test correct values for NewLine"""
+
+    #
+    #	TEST NEWLINE PROPERTY
+    #
+	def test_NewLine_Correct_ShouldNotFail(self):
+		"""Test correct values for NewLine (should not fail)"""
 		try:
 			self.a.NewLine="This other new line"
 		except:
