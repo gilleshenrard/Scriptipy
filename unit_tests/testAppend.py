@@ -14,6 +14,9 @@ class testAppend(unittest.TestCase):
 		"""Test correct values for constructor (sould not fail)"""
 		try:
 			a2=Append("fileName", "This is a new line")
+			self.assertEqual(a2.Name, "fileName")
+			self.assertEqual(a2.NewLine, "This is a new line")
+			self.assertEqual(a2.Comment, "")
 		except:
 			self.fail("Correct Constructor values assignment failed!")
 
@@ -24,5 +27,6 @@ class testAppend(unittest.TestCase):
 		"""Test correct values for NewLine (should not fail)"""
 		try:
 			self.a.NewLine="This other new line"
+			self.assertEqual(self.a.NewLine, "This other new line")
 		except:
 			self.fail("Correct NewLine values assignment failed!")
