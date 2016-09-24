@@ -8,7 +8,7 @@ class testPackage(unittest.TestCase):
 	#	TEST INITIALISATION
 	#
 	def setUp(self):
-		"""Declare an Append test object with correct values (should not fail).
+		"""Declare a Package test object with correct values (should not fail).
 		Test each given values."""
 		os = OSGear("ubuntu", "apt-get", {"Installation" : "install"})
 		self.p = Package("python", "Installs python", "Installation", "-y", os)
