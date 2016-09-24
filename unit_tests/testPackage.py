@@ -13,8 +13,19 @@ class testPackage(unittest.TestCase):
 	def test_Constructor_Correct_ShouldNotFail(self):
 		"""Test correct values for Package constructor (should not fail)"""
 		try:
-			os = OSGear("ubuntu", "apt-get")
-			os.Features["install"]="install"
+			os = OSGear("ubuntu", "apt-get", {"install" : "install"})
 			test = Package("python", "Installs python", "install", "-y", os)
 		except:
 			self.fail("Test for correct values assignment into Package failed!")
+
+	#
+	# TEST __STR__
+	#
+	def test_str_Final_ShouldNotFail(self):
+		"""Test if final result is the one expected"""
+		try:
+			os = OSGear("ubuntu", "apt-get", {"install" : "install"})
+			test = Package("python", "Installs python", "install", "-y", os)
+			self.assertEqual(str(test), "apt-get install -y python")
+		except:
+			self.fail("Test for expected final command failed!")
