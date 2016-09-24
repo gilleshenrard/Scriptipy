@@ -9,10 +9,10 @@ class Repository(OSSpecific):
     :param os: OS specific characteristics (OSGear object)"""
 
 	def __init__(self, name="", act="", opt="", os=OSGear()):
-        """Declare and initialise a repository action command."""
+		"""Declare and initialise a repository action command."""
 		OSSpecific.__init__(self, name, act, opt, os)
 
 	def __str__(self):
-        """Return a repository action command as a string."""
+		"""Return a repository action command as a string."""
 		act=self.OS.Options[self.Action]
 		return "{} {} {}".format(act, self.Options, self.Name)
