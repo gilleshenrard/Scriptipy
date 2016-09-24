@@ -5,7 +5,7 @@ class testReplace(unittest.TestCase):
 	"""Test Case to test out Replace"""
 	def setUp(self):
 		"""Initialise test variables"""
-		self.r=Replace()
+		self.r=Replace("fileName", "This is an old line", "This is a new line")
 
     #
     #	TEST CONSTRUCTOR
@@ -28,3 +28,13 @@ class testReplace(unittest.TestCase):
 			self.assertEqual(self.r.OldLine, "This other old line")
 		except:
 			self.fail("Correct OldLine values assignment failed!")
+
+	#
+	# TEST __STR__
+	#
+	def test_str_Final_ShouldNotFail(self):
+		"""Test if final result is the one expected"""
+		try:
+			self.assertEqual(str(self.r), "sed -i 's/This is an old line/This is a new line/g' fileName")
+		except:
+			self.fail("Test for expected final command failed!")
