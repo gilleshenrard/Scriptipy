@@ -12,31 +12,31 @@ class OSGear:
 		self.Features = opt
 
 	def _set_name(self, name):
-        """Set the OS name."""
+		"""Set the OS name."""
 		self._name = name
 
 	def _get_name(self):
-        """Return the OS name."""
+		"""Return the OS name."""
 		return self._name
 
 	def _set_packageManager(self, pacman):
-        """Set the package manager OS call."""
+		"""Set the package manager OS call."""
 		self._packageManager = pacman
 
 	def _get_packageManager(self):
-        """Return the package manager OS call."""
+		"""Return the package manager OS call."""
 		return self._packageManager
 
 	def _set_features(self, opt):
-        """Set the specific options used by the package manager (install, remove, list, ...)."""
+		"""Set the specific options used by the package manager (install, remove, list, ...)."""
 		self._features = opt
 
 	def _get_features(self):
-        """Return the specific options used by the package manager."""
+		"""Return the specific options used by the package manager."""
 		return self._features
 
 	def __str__(self):
-        """Return a short report of the OS as a string."""
+		"""Return a short report of the OS as a string."""
 		return "OS : {}, package manager : {}, predefined options : {}".format(self._name, self._packageManager, self._features)
 
 	Name = property(_get_name, _set_name)
