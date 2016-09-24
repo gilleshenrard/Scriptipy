@@ -9,7 +9,7 @@ class testOSSpecific(unittest.TestCase):
 	#	TEST INITIALISATION
 	#
 	def setUp(self):
-		"""Declare an Append test object with correct values (should not fail).
+		"""Declare an OSSpecific test object with correct values (should not fail).
 		Test each given values."""
 		self.o=OSSpecificNotAbstract(name="test", act="", opt="-l", os=OSGear())
 		self.assertEqual(self.o.Action, "")
