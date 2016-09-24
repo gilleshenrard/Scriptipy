@@ -8,7 +8,7 @@ class testOSGear(unittest.TestCase):
 	#	TEST INITIALISATION
 	#
 	def setUp(self):
-		"""Declare an Append test object with correct values (should not fail).
+		"""Declare an OSGear test object with correct values (should not fail).
 		Test each given values."""
 		self.os=OSGear("Ubuntu", "apt-get", {"update": "update"})
 		self.assertEqual(self.os.Name, "Ubuntu")
