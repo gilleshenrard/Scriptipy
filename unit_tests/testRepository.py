@@ -7,7 +7,6 @@ class testRepository(unittest.TestCase):
 		"""Initialise test variables"""
 		os = OSGear("ubuntu", "apt-get", {"Add": "add-apt-repository"})
 		self.r=Repository("some PPA", "Adds a PPA", "Add", "-y", os)
-		pass
 
 	#
 	#	TEST CONSTRUCTOR

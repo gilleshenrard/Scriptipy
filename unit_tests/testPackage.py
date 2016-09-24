@@ -7,7 +7,6 @@ class testPackage(unittest.TestCase):
 		"""Initialise test variables"""
 		os = OSGear("ubuntu", "apt-get", {"install" : "install"})
 		self.p = Package("python", "Installs python", "install", "-y", os)
-		pass
 
 	#
 	#	TEST CONSTRUCTOR
