@@ -6,14 +6,15 @@ class testPackage(unittest.TestCase):
 	def setUp(self):
 		"""Initialise test variables"""
 		pass
-#
-#	TEST CONSTRUCTOR
-#
-	def test_Correct_Constructor_ShouldNotFail(self):
-		"""Test correct values for constructor"""
+
+	#
+	#	TEST CONSTRUCTOR
+	#
+	def test_Constructor_Correct_ShouldNotFail(self):
+		"""Test correct values for Package constructor (should not fail)"""
 		try:
 			os = OSGear("ubuntu", "apt-get")
 			os.Features["install"]="install"
-			test = Package("python", "install", "-y", os)
+			test = Package("python", "Installs python", "install", "-y", os)
 		except:
 			self.fail("Test for correct values assignment into Package failed!")
