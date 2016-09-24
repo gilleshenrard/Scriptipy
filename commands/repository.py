@@ -14,5 +14,4 @@ class Repository(OSSpecific):
 
 	def __str__(self):
 		"""Return a repository action command as a string."""
-		act=self.OS.Options[self.Action]
-		return "{} {} {}".format(act, self.Options, self.Name)
+		return "{} {} {}".format(self.Action, self.Options, self.Name)
