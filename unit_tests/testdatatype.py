@@ -9,7 +9,7 @@ class testDataType(unittest.TestCase):
 	#	TEST INITIALISATION
 	#
 	def setUp(self):
-		"""Declare a Repository test object with correct values (should not fail).
+		"""Declare a DataTypeNotAbstract test object with correct values (should not fail).
 		Test each given values."""
 		self.d=DataTypeNotAbstract("test")
 		self.assertEqual(self.d.Source, "test")
