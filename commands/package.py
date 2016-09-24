@@ -8,10 +8,10 @@ class Package(OSSpecific):
     :param option: Additionnal options of the package command
     :param os: OS specific characteristics (OSGear object)"""
 
-	def __init__(self, name="", action="", option="", os=OSGear()):
-        """Declare and initialise a package action command."""
-		OSSpecific.__init__(self, name, action, option, os)
+	def __init__(self, name="", comment="", action="", option="", os=OSGear()):
+		"""Declare and initialise a package action command."""
+		OSSpecific.__init__(self, name, comment, action, option, os)
 
 	def __str__(self):
-        """Return a package action command as a string."""
+		"""Return a package action command as a string."""
 		return "{} {} {} {}".format(self.OS.PackageManager, self.Action, self.Options, self.Name)
