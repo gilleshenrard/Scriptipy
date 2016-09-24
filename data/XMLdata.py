@@ -1,14 +1,17 @@
 from .datatype import *
 
 class XMLdata(DataType):
-	"""Defines the XML file handling"""
+	"""Command XML data (de)serialisation
+	:param source: XML source file name"""
 
 	def __init__(self, source=""):
-		"""Builds a new XML handling module"""
+		"""Create and initialise an XML (de)serialisation process."""
 		DataType.__init__(self, source)
 
 	def deserialize(self):
-		"""Extracting procedure"""
+		"""Deserialise data from an XML data file."""
+		pass
 
 	def serialize(self):
-		"""Serializing procedure"""
+		"""Serialise data from a JSON data file."""
+		pass
