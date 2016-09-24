@@ -8,9 +8,9 @@ class Repository(OSSpecific):
     :param option: Additionnal options of the repository command
     :param os: OS specific characteristics (OSGear object)"""
 
-	def __init__(self, name="", act="", opt="", os=OSGear()):
+	def __init__(self, name="", comment="", act="", opt="", os=OSGear()):
 		"""Declare and initialise a repository action command."""
-		OSSpecific.__init__(self, name, act, opt, os)
+		OSSpecific.__init__(self, name, comment, act, opt, os)
 
 	def __str__(self):
 		"""Return a repository action command as a string."""
