@@ -14,6 +14,8 @@ class testCommand(unittest.TestCase):
 		"""Test correct values for Command constructor (should not fail)"""
 		try:
 			c2=Command("top", "Prints a real time list of processes")
+			self.assertEqual(c2.Name, "top")
+			self.assertEqual(c2.Comment, "Prints a real time list of processes")
 		except:
 			self.fail("Test for correct Constructor values assignment failed!")
 
@@ -24,6 +26,7 @@ class testCommand(unittest.TestCase):
 		"""Test correct name value for Command (should not fail)"""
 		try:
 			self.c.Name="ls -l"
+			self.assertEqual(self.c.Name, "ls -l")
 		except:
 			self.fail("Test for correct Name assignment failed!")
 
@@ -34,5 +37,6 @@ class testCommand(unittest.TestCase):
 		"""Test correct comment value for Command (should not fail)"""
 		try:
 			self.c.Comment="Some comment"
+			self.assertEqual(self.c.Comment, "Some comment")
 		except:
 			self.fail("Test for correct Comment assignment failed!")
