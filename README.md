@@ -17,10 +17,10 @@ It works like a DBMS, but for shell, in Python.
 
 
 ## Class diagrams
------------------
+
 [Commands](https://www.lucidchart.com/invitations/accept/0864b763-d6b5-4b8f-837d-3d79d1bb6b46)
 
 ## ToDo
--------
+
 * _Implement file serialization (XML, JSON, DB)_
 * _Implement UI_
