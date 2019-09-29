@@ -56,3 +56,6 @@ target/
 # XML files
 */__pycache__
 unit_tests/test_files/jsontestdata2.txt
+
+# Pycharm files
+.idea/*
