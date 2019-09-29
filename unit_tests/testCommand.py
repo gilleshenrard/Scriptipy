@@ -11,6 +11,12 @@ class testCommand(unittest.TestCase):
 		"""Declare a Command test object with correct values (should not fail).
 		Test each given values."""
 		self.c=Command("top", "Prints a real time list of processes")
+
+	#
+	#	TEST VALUES
+	#
+	def test_Values_ShouldNotFail(self):
+		"""Test correct value set to the values of a command"""
 		self.assertEqual(self.c.Name, "top")
 		self.assertEqual(self.c.Comment, "Prints a real time list of processes")
 

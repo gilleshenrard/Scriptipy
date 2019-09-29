@@ -11,6 +11,12 @@ class testOSGear(unittest.TestCase):
 		"""Declare an OSGear test object with correct values (should not fail).
 		Test each given values."""
 		self.os=OSGear("Ubuntu", "apt-get", {"update": "update"})
+
+	#
+	#	TEST VALUES
+	#
+	def test_Values_ShouldNotFail(self):
+		"""Test correct value set to the metadata of an OS"""
 		self.assertEqual(self.os.Name, "Ubuntu")
 		self.assertEqual(self.os.PackageManager, "apt-get")
 		self.assertEqual(self.os.Features, {"update": "update"})

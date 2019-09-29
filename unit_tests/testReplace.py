@@ -11,6 +11,12 @@ class testReplace(unittest.TestCase):
 		"""Declare a Replace test object with correct values (should not fail).
 		Test each given values."""
 		self.r=Replace("fileName", "This is an old line", "This is a new line")
+
+	#
+	#	TEST VALUES
+	#
+	def test_OldLine_ShouldNotFail(self):
+		"""Test correct value set to the old line of a replace action"""
 		self.assertEqual(self.r.OldLine, "This is an old line")
 
     #

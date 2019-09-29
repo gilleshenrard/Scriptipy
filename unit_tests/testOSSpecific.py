@@ -12,6 +12,12 @@ class testOSSpecific(unittest.TestCase):
 		"""Declare an OSSpecific test object with correct values (should not fail).
 		Test each given values."""
 		self.o=OSSpecificNotAbstract(name="test", act="", opt="-l", os=OSGear())
+
+	#
+	#	TEST VALUES
+	#
+	def test_Values_ShouldNotFail(self):
+		"""Test correct value set to an OS metadata"""
 		self.assertEqual(self.o.Action, "")
 		self.assertEqual(self.o.Options, "-l")
 

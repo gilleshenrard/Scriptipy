@@ -11,6 +11,12 @@ class testJSONData(unittest.TestCase):
 		"""Declare a JSONData test object with correct values (should not fail).
 		Test each given values."""
 		self.j=JSONData("unit_tests/test_files/jsontestdata.txt")
+
+	#
+	#	TEST VALUES
+	#
+	def test_Source_ShouldNotFail(self):
+		"""Test correct value set to the source file for JSON data"""
 		self.assertEqual(self.j.Source, "unit_tests/test_files/jsontestdata.txt")
 
 	#

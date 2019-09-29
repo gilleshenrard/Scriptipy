@@ -11,9 +11,15 @@ class testAppend(unittest.TestCase):
 		"""Declare an Append test object with correct values (should not fail).
 		Test each given values."""
 		self.a=Append("FileName", "This is a new line")
+
+	#
+	#	TEST VALUES
+	#
+	def test_NewLine_ShouldNotFail(self):
+		"""Test correct value set to the new line value for an append action"""
 		self.assertEqual(self.a.NewLine, "This is a new line")
 
-    #
+	#
     #	TEST NEWLINE PROPERTY
     #
 	def test_NewLine_Correct_ShouldNotFail(self):

@@ -12,6 +12,12 @@ class testDataType(unittest.TestCase):
 		"""Declare a DataTypeNotAbstract test object with correct values (should not fail).
 		Test each given values."""
 		self.d=DataTypeNotAbstract("test")
+
+	#
+	#	TEST VALUES
+	#
+	def test_Source_ShouldNotFail(self):
+		"""Test correct value set to the source file for a generic data type"""
 		self.assertEqual(self.d.Source, "test")
 
 	#

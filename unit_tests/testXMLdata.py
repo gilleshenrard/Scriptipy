@@ -11,6 +11,12 @@ class testXMLData(unittest.TestCase):
 		"""Declare a XMLData test object with correct values (should not fail).
 		Test each given values."""
 		self.x=XMLdata("unit_tests/test_files/xmltestdata.xml")
+
+	#
+	#	TEST VALUES
+	#
+	def test_Source_ShouldNotFail(self):
+		"""Test correct value set to the source file for XML data"""
 		self.assertEqual(self.x.Source, "unit_tests/test_files/xmltestdata.xml")
 
 	#
